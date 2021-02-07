@@ -1,0 +1,50 @@
+---
+title: "R Notebook: intro"
+author: "Kaleb Willis"
+output: html_notebook
+---
+```{r}
+which.github = "local"
+
+github.local = "X:/_git_/WSU_STAT419_2021/r-intro/";
+github.remote = "";
+
+if(which.github == "remote")
+  {
+   include.me = paste0(github.remote, "");
+   library(devtools);
+   source(include.me);
+}else
+  {
+   include.me = paste0(github.local, "");
+   source(include.me);
+  
+}
+```
+
+
+# handShake
+```{r}
+is.wholenumber = function(x, tol = .Machine$double.eps^0.5)
+{
+  abs(x - round(x)) < tol
+}
+
+handShake = function(n=1, plotMe =FALSE)
+{
+  if(n < 1) {stop("n cannot be less than 1");}
+  if(!is.wholenumber(n)) {stop("not an integer");}
+  h = n*(n-1)/2;
+  if(plotMe) 
+     {
+     plot(0,0,xlim=c(-n-1,n+1),ylim=c(-n-1,n+1));
+     draw.circle(0,0,n,n+100);
+     draw.circle(0,0,n,n);
+     
+  }
+ h;
+}
+```
+# Declaration of Independence
+
+# Determinant of 3x3 matrix
