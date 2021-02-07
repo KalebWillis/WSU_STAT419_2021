@@ -25,6 +25,8 @@ if(which.github == "remote")
 
 # handShake
 ```{r}
+library(plotrix)
+library(pracma)
 is.wholenumber = function(x, tol = .Machine$double.eps^0.5)
 {
   abs(x - round(x)) < tol
@@ -37,10 +39,19 @@ handShake = function(n=1, plotMe =FALSE)
   h = n*(n-1)/2;
   if(plotMe) 
      {
-     plot(0,0,xlim=c(-n-1,n+1),ylim=c(-n-1,n+1));
+     r = n
+     plot(0,0,xlim=c(-n-1,n+1), ylim=c(-n-1,n+1), main=paste0(h," handshakes for ",n," people"), xlab="", ylab="", xaxt="n", yaxt="n",bty="n", asp=1);
      draw.circle(0,0,n,n+100);
-     draw.circle(0,0,n,n);
-     
+     #draw.circle(0,0,n,n);
+     #points(0,r, pch=16)
+     #plot(r*sin(theta),r*cos(theta));
+     #handshake.points = data.matrix(a = 1:n, b = )
+     for(i in 1:n){
+        deg = 360/n;
+        theta = 2*pi*deg/360;
+        plot(r*sin(i*theta),r*cos(i*theta), pch=16, )
+        lines(r*sin(i*theta), r*cos(i*theta), type="l")
+     }
   }
  h;
 }
