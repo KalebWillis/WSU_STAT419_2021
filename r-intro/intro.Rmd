@@ -18,7 +18,7 @@ if(which.github == "remote")
    source(include.me);
 }else
   {
-   include.me = paste0(github.local, "blob/main/functions/functions-intro.R");
+   include.me = paste0(github.local, "functions/functions-intro.R");
    source(include.me);
   
 }
@@ -127,8 +127,7 @@ ComputeDeterminate3 = function(myMatrix)
   g=myMatrix[3,1];
   h=myMatrix[3,2];
   i=myMatrix[3,3];
-  
-  # https://crypto.interactive-maths.com/hill-cipher.html
+
   (a*(e*i-f*h))-(b*(d*i-f*g))+(c*(d*h-e*g))
 }
 ```
