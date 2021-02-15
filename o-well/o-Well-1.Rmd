@@ -1,0 +1,63 @@
+---
+title: "o-Well-1"
+author: "Kaleb Willis"
+output: html_document
+---
+
+```{r}
+which.github = "local"
+
+github.local = "X:/_git_/WSU_STAT419_2021/";
+github.remote = "https://github.com/KalebWillis/WSU_STAT419_2021/";
+
+if(which.github == "remote")
+  {
+   include.me = paste0(github.remote, "blob/main/functions/functions-owell.R");
+   library(devtools);
+   #source(include.me);
+}else
+  {
+   include.me = paste0(github.local, "o-well/");
+   #source(include.me);
+  
+}
+```
+
+```{r}
+#Read PDF
+path.data = paste0(include.me, "datasets/")
+owell.metals = read.delim(paste0(path.data, "table1.txt"), header = TRUE, sep = " ")
+owell.chemistry = read.delim(paste0(path.data, "table2.txt"), header = TRUE, sep = " ")
+well.location = read.delim(paste0(path.data, "wells-location.txt"), header = TRUE, sep = "|")
+well.faults = read.delim(paste0(path.data, "faults.txt"), header = TRUE, sep = " ")
+well.geology = read.delim(paste0(path.data, "geology.txt"), header = TRUE, sep = " ")
+```
+# Append location, fault, and geology column
+```{r}
+owell.metals$latitude = well.location$latitude;
+owell.metals$longitude = well.location$longitude;
+owell.metals$altitude.ft = well.location$altitude.ft;
+owell.metals$fault = well.faults$fault;
+owell.metals$geology = well.geology$geology;
+
+owell.chemistry$latitude = well.location$latitude;
+owell.chemistry$longitude = well.location$longitude;
+owell.chemistry$altitude.ft = well.location$altitude.ft;
+owell.chemistry$fault = well.faults$fault;
+owell.chemistry$geology = well.geology$geology;
+
+```
+# Create lists
+```{r}
+wells = list();
+wells$saudi$metals = owell.metals;
+wells$saudi$chemistry = owell.chemistry;
+mylist = list(owell.chemistry, owell.metals);
+```
+
+```{r}
+myfile = paste0(path.data, "well.rds");
+saveRDS(mylist, file = myfile);
+myfile = paste0(path.data, "well.txt");
+write.table(mylist, file = myfile, append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
+```
