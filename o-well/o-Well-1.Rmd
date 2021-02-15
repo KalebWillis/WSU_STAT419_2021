@@ -5,14 +5,14 @@ output: html_document
 ---
 
 ```{r}
-which.github = "local"
+which.github = "remote"
 
 github.local = "X:/_git_/WSU_STAT419_2021/";
-github.remote = "https://github.com/KalebWillis/WSU_STAT419_2021/";
+github.remote = "https://raw.githubusercontent.com/KalebWillis/WSU_STAT419_2021/main/";
 
 if(which.github == "remote")
   {
-   include.me = paste0(github.remote, "blob/main/functions/functions-owell.R");
+   include.me = paste0(github.remote, "o-well/");
    library(devtools);
    #source(include.me);
 }else
@@ -22,15 +22,14 @@ if(which.github == "remote")
   
 }
 ```
-
+# Read in txt files
 ```{r}
-#Read PDF
 path.data = paste0(include.me, "datasets/")
-owell.metals = read.delim(paste0(path.data, "table1.txt"), header = TRUE, sep = " ")
-owell.chemistry = read.delim(paste0(path.data, "table2.txt"), header = TRUE, sep = " ")
+owell.metals = read.delim(paste0(path.data, "table1.txt"), header = TRUE, sep = "")
+owell.chemistry = read.delim(paste0(path.data, "table2.txt"), header = TRUE, sep = "")
 well.location = read.delim(paste0(path.data, "wells-location.txt"), header = TRUE, sep = "|")
-well.faults = read.delim(paste0(path.data, "faults.txt"), header = TRUE, sep = " ")
-well.geology = read.delim(paste0(path.data, "geology.txt"), header = TRUE, sep = " ")
+well.faults = read.delim(paste0(path.data, "faults.txt"), header = TRUE, sep = "")
+well.geology = read.delim(paste0(path.data, "geology.txt"), header = TRUE, sep = "")
 ```
 # Append location, fault, and geology column
 ```{r}
@@ -52,12 +51,12 @@ owell.chemistry$geology = well.geology$geology;
 wells = list();
 wells$saudi$metals = owell.metals;
 wells$saudi$chemistry = owell.chemistry;
-mylist = list(owell.chemistry, owell.metals);
-```
 
+```
+# Write out files
 ```{r}
-myfile = paste0(path.data, "well.rds");
-saveRDS(mylist, file = myfile);
-myfile = paste0(path.data, "well.txt");
-write.table(mylist, file = myfile, append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
+myfile = paste0(include.me, "well.RDS");
+saveRDS(wells, file = "well.rds");
+myfile = paste0(include.me, "well.txt");
+write.table(wells, file = "well.txt", append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
 ```
