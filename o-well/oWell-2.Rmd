@@ -1,6 +1,6 @@
 ---
 title: "o-Well-2"
-autor: Kaleb Willis
+author: Kaleb Willis
 output:
   pdf_document: default
   html_notebook: default
@@ -8,7 +8,7 @@ output:
 
 ## File Location
 ```{r}
-which.github = "local"
+which.github = "remote"
 
 github.local = "X:/_git_/WSU_STAT419_2021/";
 github.remote = "https://raw.githubusercontent.com/KalebWillis/WSU_STAT419_2021/main/";
@@ -43,13 +43,5 @@ metals.summary
 ```{r}
 chemistry.summary = summary(owell.chemistry)
 chemistry.summary
-```
-
-```{r}
-
-
-write.table(metals.summary, file = "saudi.txt", append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
 
 ```
-
-

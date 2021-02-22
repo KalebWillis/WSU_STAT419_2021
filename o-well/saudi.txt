@@ -1,7 +1,37 @@
-"      As"|"      B"|"      Ba"|"      Be"|"      Cd"|"      Co"|"      Cr"|"      Cu"|"      Fe"|"      Hg"|"      Mn"|"      Mo"|"      Pb"|"      Se"|"      Zn"|"   latitude"|"  longitude"|" altitude.ft"|"    fault"|"  geology"
-""|"Min.   :0.1000  "|"Min.   : 4.40  "|"Min.   :  3.30  "|"Min.   :0.2000  "|"Min.   :0.1  "|"Min.   :0.1000  "|"Min.   :0.1000  "|"Min.   :0.5000  "|"Min.   : 0.200  "|"Min.   : 0.10  "|"Min.   :0.1000  "|"Min.   :11.00  "|"Min.   :0.100  "|"Min.   :0.100  "|"Min.   :0.10  "|"Min.   :28.44  "|"Min.   :34.79  "|"Min.   : 257  "|"Min.   :  100  "|"Length:23         "
-""|"1st Qu.:0.3000  "|"1st Qu.: 7.00  "|"1st Qu.:  8.75  "|"1st Qu.:0.3000  "|"1st Qu.:0.3  "|"1st Qu.:0.1000  "|"1st Qu.:0.4000  "|"1st Qu.:0.5000  "|"1st Qu.: 0.750  "|"1st Qu.: 1.10  "|"1st Qu.:0.1000  "|"1st Qu.:13.50  "|"1st Qu.:1.800  "|"1st Qu.:0.450  "|"1st Qu.:0.50  "|"1st Qu.:28.56  "|"1st Qu.:34.88  "|"1st Qu.: 894  "|"1st Qu.:  500  "|"Class :character  "
-""|"Median :0.5000  "|"Median : 9.40  "|"Median : 16.70  "|"Median :0.4000  "|"Median :0.3  "|"Median :0.2000  "|"Median :0.5000  "|"Median :0.6000  "|"Median : 2.000  "|"Median : 3.20  "|"Median :0.2000  "|"Median :18.00  "|"Median :2.200  "|"Median :0.900  "|"Median :1.10  "|"Median :28.60  "|"Median :34.98  "|"Median :1245  "|"Median : 2500  "|"Mode  :character  "
-""|"Mean   :0.6304  "|"Mean   :10.85  "|"Mean   : 28.34  "|"Mean   :0.3652  "|"Mean   :0.3  "|"Mean   :0.1783  "|"Mean   :0.6652  "|"Mean   :0.6174  "|"Mean   : 8.078  "|"Mean   :10.77  "|"Mean   :0.4739  "|"Mean   :18.87  "|"Mean   :2.013  "|"Mean   :1.252  "|"Mean   :1.53  "|"Mean   :28.75  "|"Mean   :34.97  "|"Mean   :1416  "|"Mean   : 4126  "|NA
-""|"3rd Qu.:0.8000  "|"3rd Qu.:14.20  "|"3rd Qu.: 42.15  "|"3rd Qu.:0.4000  "|"3rd Qu.:0.3  "|"3rd Qu.:0.2000  "|"3rd Qu.:0.7500  "|"3rd Qu.:0.7000  "|"3rd Qu.: 4.250  "|"3rd Qu.:18.95  "|"3rd Qu.:0.3000  "|"3rd Qu.:23.50  "|"3rd Qu.:2.450  "|"3rd Qu.:2.000  "|"3rd Qu.:1.80  "|"3rd Qu.:28.94  "|"3rd Qu.:35.02  "|"3rd Qu.:2050  "|"3rd Qu.: 4500  "|NA
-""|"Max.   :2.2000  "|"Max.   :22.80  "|"Max.   :100.80  "|"Max.   :0.5000  "|"Max.   :0.4  "|"Max.   :0.7000  "|"Max.   :2.1000  "|"Max.   :0.9000  "|"Max.   :93.000  "|"Max.   :58.30  "|"Max.   :5.2000  "|"Max.   :31.00  "|"Max.   :3.000  "|"Max.   :3.000  "|"Max.   :6.50  "|"Max.   :29.34  "|"Max.   :35.22  "|"Max.   :3168  "|"Max.   :20000  "|NA
+"Var1"|"Var2"|"Freq"
+"1"|""|"    fault"|"1st Qu.:  500  "
+"2"|""|"    fault"|"3rd Qu.: 4500  "
+"3"|""|"    fault"|"Max.   :20000  "
+"4"|""|"    fault"|"Mean   : 4126  "
+"5"|""|"    fault"|"Median : 2500  "
+"6"|""|"    fault"|"Min.   :  100  "
+"7"|""|"   latitude"|"1st Qu.:28.56  "
+"8"|""|"   latitude"|"3rd Qu.:28.94  "
+"9"|""|"   latitude"|"Max.   :29.34  "
+"10"|""|"   latitude"|"Mean   :28.75  "
+"11"|""|"   latitude"|"Median :28.60  "
+"12"|""|"   latitude"|"Min.   :28.44  "
+"13"|""|"  geology"|"Class :character  "
+"14"|""|"  geology"|"Length:23         "
+"15"|""|"  geology"|"Mode  :character  "
+"16"|""|"  geology"|NA
+"17"|""|"  geology"|NA
+"18"|""|"  geology"|NA
+"19"|""|"  geology"|NA
+"20"|""|"  geology"|NA
+"21"|""|"  geology"|NA
+"22"|""|"  geology"|NA
+"23"|""|"  geology"|NA
+"24"|""|"  geology"|NA
+"25"|""|"  longitude"|"1st Qu.:34.88  "
+"26"|""|"  longitude"|"3rd Qu.:35.02  "
+"27"|""|"  longitude"|"Max.   :35.22  "
+"28"|""|"  longitude"|"Mean   :34.97  "
+"29"|""|"  longitude"|"Median :34.98  "
+"30"|""|"  longitude"|"Min.   :34.79  "
+"31"|""|" altitude.ft"|"1st Qu.: 894  "
+"32"|""|" altitude.ft"|"3rd Qu.:2050  "
+"33"|""|" altitude.ft"|"Max.   :3168  "
+"34"|""|" altitude.ft"|"Mean   :1416  "
+"35"|""|" altitude.ft"|"Median :1245  "
+"36"|""|" altitude.ft"|"Min.   : 257  "
