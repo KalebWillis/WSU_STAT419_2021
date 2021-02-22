@@ -1,0 +1,55 @@
+---
+title: "o-Well-2"
+autor: Kaleb Willis
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+## File Location
+```{r}
+which.github = "local"
+
+github.local = "X:/_git_/WSU_STAT419_2021/";
+github.remote = "https://raw.githubusercontent.com/KalebWillis/WSU_STAT419_2021/main/";
+
+if(which.github == "remote")
+  {
+   include.me = paste0(github.remote, "o-well/");
+   library(devtools);
+   #source(include.me);
+}else
+  {
+   include.me = paste0(github.local, "o-well/");
+   #source(include.me);
+  
+}
+```
+## loading data frames produced in o-Well-1
+```{r}
+data.path = paste0(include.me, "owell-metals.txt")
+owell.metals = read.delim(data.path, header = TRUE, sep = "|")
+data.path = paste0(include.me, "owell-chemistry.txt")
+owell.chemistry = read.delim(data.path, header = TRUE, sep = "|")
+```
+\newpage
+## Summary of Metals Statistics
+```{r}
+metals.summary = summary(owell.metals)
+metals.summary
+```
+\newpage
+## Summary of Chemistry Statistics
+```{r}
+chemistry.summary = summary(owell.chemistry)
+chemistry.summary
+```
+
+```{r}
+
+
+write.table(metals.summary, file = "saudi.txt", append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
+
+```
+
+
