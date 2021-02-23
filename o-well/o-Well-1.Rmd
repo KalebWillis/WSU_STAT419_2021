@@ -38,13 +38,14 @@ owell.metals$longitude = well.location$longitude;
 owell.metals$altitude.ft = well.location$altitude.ft;
 owell.metals$fault = well.faults$fault;
 owell.metals$geology = well.geology$geology;
+write.table(owell.metals, file = "owell-metals.txt", append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
 
 owell.chemistry$latitude = well.location$latitude;
 owell.chemistry$longitude = well.location$longitude;
 owell.chemistry$altitude.ft = well.location$altitude.ft;
 owell.chemistry$fault = well.faults$fault;
 owell.chemistry$geology = well.geology$geology;
-
+write.table(owell.chemistry, file = "owell-chemistry.txt", append = FALSE, sep = "|", row.names = TRUE, col.names = TRUE)
 ```
 # Create lists
 ```{r}
